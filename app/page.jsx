@@ -24,7 +24,15 @@ export default function HomeRepairTaskApp() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
+    <div style={{
+  minHeight: "100vh",
+  background: "#f9fafb",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: 24
+}}>
+      
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="w-full max-w-3xl">
         <Card className="rounded-2xl shadow-xl">
           <CardContent className="p-8 space-y-6">
@@ -100,9 +108,25 @@ export default function HomeRepairTaskApp() {
             <div className="flex justify-between pt-6">
               {step > 1 && <Button variant="outline" onClick={() => setStep(step - 1)}>Back</Button>}
               {step < 4 ? (
-                <Button className="ml-auto" onClick={() => setStep(step + 1)}>Next</Button>
+                <button style={{
+  padding: "10px 16px",
+  borderRadius: 8,
+  background: "#000",
+  color: "#fff",
+  border: "none",
+  cursor: "pointer"
+}}>
+
               ) : (
-                <Button className="ml-auto">Submit Task</Button>
+                <button style={{
+  padding: "10px 16px",
+  borderRadius: 8,
+  background: "#000",
+  color: "#fff",
+  border: "none",
+  cursor: "pointer"
+}}>
+
               )}
             </div>
           </CardContent>
